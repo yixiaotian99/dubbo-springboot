@@ -20,8 +20,9 @@ public class UserServiceImpl implements UserService {
 
     /**
      * 不使用 @Autowired 而是使用 dubbo 的引用
+     * version=1.0 或随机所有版本 *
      */
-    @Reference
+    @Reference(timeout = 3000, retries = 0, version = "1.0", stub = "com.xiao.user.consumer.service.UserServiceStub")
     private OrderService orderService;
 
 

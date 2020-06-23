@@ -22,6 +22,7 @@
 
     <modules>
         <module>order-serivce-provider</module>
+        <module>user-service-consumer</module>
         <module>xiao-model</module>
         <module>xiao-manager</module>
     </modules>
@@ -64,6 +65,13 @@
                 <artifactId>curator-recipes</artifactId>
                 <version>4.0.1</version>
             </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.3.7</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

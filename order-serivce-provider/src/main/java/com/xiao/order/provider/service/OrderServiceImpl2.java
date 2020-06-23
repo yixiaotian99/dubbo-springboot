@@ -4,7 +4,6 @@ import cn.hutool.core.thread.ThreadUtil;
 import com.xiao.model.UserAddress;
 import com.xiao.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.dubbo.config.annotation.Method;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -19,9 +18,9 @@ import java.util.List;
  * @Description 订单接口实现，注意这里的 Service 是dubbo的
  **/
 @Slf4j
-@Service(timeout = 4000, version = "1.0")
+@Service(timeout = 4000, version = "2.0")
 @Component
-public class OrderServiceImpl implements OrderService {
+public class OrderServiceImpl2 implements OrderService {
 
 
     @Override
@@ -35,7 +34,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<UserAddress> findUserAddrList(Long id) {
 
-        log.info("old-find all user address, id:{}", id);
+        log.info("new find all user address, id:{}", id);
 
         List<UserAddress> userAddressList = new ArrayList<>();
 
@@ -51,7 +50,8 @@ public class OrderServiceImpl implements OrderService {
             userAddressList.add(u);
 
         }
-//
+
+
 //        //模拟超时
 //        ThreadUtil.sleep(3000);
 

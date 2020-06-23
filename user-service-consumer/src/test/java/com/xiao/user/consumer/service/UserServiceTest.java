@@ -31,7 +31,7 @@ class UserServiceTest {
     @Test
     void testFindUserAllAddress() {
 
-        List<UserAddress> userAddrList = userService.findUserAddrList(null);
+        List<UserAddress> userAddrList = userService.findUserAddrList(1L);
 
         for(UserAddress userAddress: userAddrList){
             System.out.println(userAddress);
