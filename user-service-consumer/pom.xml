@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>com.xiao</groupId>
-    <artifactId>order-serivce-provider</artifactId>
+    <artifactId>user-service-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>order-serivce-provider</name>
+    <name>user-service-consumer</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -48,6 +48,7 @@
             </exclusions>
         </dependency>
 
+
         <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter -->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
@@ -69,8 +70,6 @@
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-recipes</artifactId>
         </dependency>
-
-
 
     </dependencies>
 
