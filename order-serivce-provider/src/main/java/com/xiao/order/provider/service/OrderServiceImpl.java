@@ -19,7 +19,7 @@ import java.util.List;
  * @Description 订单接口实现，注意这里的 Service 是dubbo的
  **/
 @Slf4j
-@Service(timeout = 4000, version = "1.0")
+@Service(timeout = 4000, version = "1.0", loadbalance = "random")
 @Component
 public class OrderServiceImpl implements OrderService {
 
